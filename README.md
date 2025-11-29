@@ -80,3 +80,64 @@ The system operates in three distinct phases:
 ```bash
 git clone [https://github.com/Prathmesh-Navale/Smart_Rail.git](https://github.com/Prathmesh-Navale/Smart_Rail.git)
 cd Smart_Rail
+
+
+
+1. Backend Setup
+
+After opening the project in VS-Code, navigate to the backend folder. You need to create a .env file for your database connection.
+
+MONGO_URI=mongodb://localhost:27017/smartrail
+PORT=5000
+
+
+<h5>Make sure that your MongoDB is running locally or provide your Atlas connection string.</h5>
+
+
+
+Now open the project terminal and type these commands inside the backend folder:
+
+npm install
+npm start
+
+
+If you see "Server running on port 5000", you are good to go!
+
+2. AI Engine (Computer Vision)
+
+This module runs the YOLOv8 model. Open the ai_engine folder in your terminal.
+
+
+
+
+It is recommended to create a virtual environment first.
+
+python -m venv venv
+# Activate the venv (Windows: venv\Scripts\activate, Mac/Linux: source venv/bin/activate)
+
+
+Now install the required Python libraries:
+
+pip install ultralytics opencv-python flask numpy
+
+
+<h5>if you see an error regarding 'pip', make sure Python is added to your system PATH.</h5>
+
+
+
+Run the detection script:
+
+python main.py
+
+
+This will start the camera feed and send data to the dashboard.
+
+
+
+If any problem arises, just create an issue in this repository, I will try to figure that out.
+
+End Product of this Project (Screenshots)
+
+ 
+ 
+ 
